@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thank you | Versipix</title>
+<meta name="description" content="Your Versipix licence key.">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <a class="brand" href="./"><img src="icon.png" alt="" width="40" height="40">Versipix</a>
+  <nav><a href="./">Home</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+</header>
+<main>
+<section class="card" data-thanks>
+<h1>Thank you.</h1>
+<p class="lede" data-status>Fetching your licence key…</p>
+<pre data-key hidden style="white-space:pre-wrap;word-break:break-all;background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:16px;color:var(--mint);font:14px/1.5 Consolas,Menlo,monospace"></pre>
+<div class="pills"><button class="pill primary" type="button" data-copy style="border:0;cursor:pointer;font:inherit;font-weight:600">Copy key</button><a class="pill ghost" href="./#get">Get Versipix</a></div>
+<p class="meta" style="margin-top:18px">In Versipix, click <strong>Enter key</strong> (or Settings, Licence) and paste it. The same key is in your email. Questions: <a href="mailto:cj83lex@gmail.com">cj83lex@gmail.com</a>.</p>
+</section>
+<script>
+(() => {
+  const box = document.querySelector('[data-thanks]'), keyBox = box.querySelector('[data-key]'), status = box.querySelector('[data-status]');
+  const id = new URLSearchParams(location.search).get('session_id');
+  if (!id) { status.textContent = 'No checkout found. Your key arrives by email within a few minutes.'; return; }
+  let tries = 0;
+  const poll = async () => {
+    try {
+      const r = await fetch('https://lexglobal.ro/api/versipix/licence?session_id=' + encodeURIComponent(id), { cache: 'no-store' });
+      if ([200, 202, 410].includes(r.status)) {
+        const j = await r.json();
+        if (j.key) { keyBox.textContent = j.key; keyBox.hidden = false; status.textContent = 'Your licence key (also sent to ' + (j.email || 'your email') + '):'; return; }
+        if (j.status === 'refunded') { status.textContent = 'This order was refunded.'; return; }
+      }
+    } catch (e) {}
+    if (++tries < 40) setTimeout(poll, 3000); else status.textContent = 'Still processing. Your key arrives by email within a few minutes; write to cj83lex@gmail.com if it does not.';
+  };
+  poll();
+  box.querySelector('[data-copy]').addEventListener('click', async e => {
+    try { await navigator.clipboard.writeText(keyBox.textContent.trim()); e.target.textContent = 'Copied'; setTimeout(() => (e.target.textContent = 'Copy key'), 1500); } catch (err) {}
+  });
+})();
+</script>
+
+</main>
+<footer>Versipix is made by LEX GLOBAL IT S.R.L., Nr. 268B, Viișoara, Bistrița-Năsăud, 420006, Romania. Contact: <a href="mailto:cj83lex@gmail.com">cj83lex@gmail.com</a>.</footer>
+</div>
+</body>
+</html>
