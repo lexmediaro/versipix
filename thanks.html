@@ -1,53 +1,158 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-GB">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Thank you | Versipix</title>
 <meta name="description" content="Your Versipix licence key.">
-<link rel="icon" href="favicon.png" type="image/png">
-<link rel="stylesheet" href="style.css">
-</head>
+
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#08231F">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/versipix/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/versipix/img/icon-32.png">
+<link rel="apple-touch-icon" href="/versipix/apple-touch-icon.png">
+<link rel="preload" href="/versipix/_astro/manrope.DHIcAJRg.woff2" as="font" type="font/woff2" crossorigin>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Versipix">
+<meta property="og:title" content="Thank you | Versipix">
+<meta property="og:description" content="Your Versipix licence key.">
+<meta property="og:url" content="https://lexmediaro.github.io/versipix/thanks.html">
+<meta property="og:image" content="https://lexmediaro.github.io/versipix/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Thank you | Versipix">
+<meta name="twitter:description" content="Your Versipix licence key.">
+<meta name="twitter:image" content="https://lexmediaro.github.io/versipix/img/og.png">
+
+<link rel="stylesheet" href="/versipix/_astro/Base.BAl_mreK.css"></head>
 <body>
-<div class="wrap">
-<header class="top">
-  <a class="brand" href="./"><img src="icon.png" alt="" width="40" height="40">Versipix</a>
-  <nav><a href="./">Home</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="/versipix/" aria-label="Versipix, home"><img src="/versipix/img/icon-64.png" width="34" height="34" alt=""><span>Versipix</span></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="/versipix/#how">How it works</a><a href="/versipix/#compare">Compare</a><a href="/versipix/#pricing">Pricing</a><a href="/versipix/#faq">FAQ</a><a href="/versipix/support.html">Support</a>
+    </nav>
+    <a class="btn btn-sm btn-mint nav-cta" href="https://github.com/lexmediaro/versipix/releases/download/v1.0.0/Versipix-1.0.0-Windows-Setup.exe">Free download</a>
+    <details class="nav-menu">
+      <summary aria-label="Menu"><span></span><span></span></summary>
+      <div class="nav-sheet">
+        <a href="/versipix/#how">How it works</a><a href="/versipix/#compare">Compare</a><a href="/versipix/#pricing">Pricing</a><a href="/versipix/#faq">FAQ</a><a href="/versipix/support.html">Support</a>
+        <p class="nav-k">Converters</p>
+        <a href="/versipix/combine-jpg-into-one-pdf.html">Combine JPGs into one PDF</a><a href="/versipix/png-to-pdf.html">PNG to PDF</a><a href="/versipix/pdf-to-png.html">PDF to PNG</a><a href="/versipix/pdf-to-jpg.html">PDF to JPG</a><a href="/versipix/jpg-to-pdf.html">JPG to PDF</a>
+      </div>
+    </details>
+  </div>
 </header>
-<main>
-<section class="card" data-thanks>
-<h1>Thank you.</h1>
-<p class="lede" data-status>Fetching your licence key…</p>
-<pre data-key hidden style="white-space:pre-wrap;word-break:break-all;background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:16px;color:var(--mint);font:14px/1.5 Consolas,Menlo,monospace"></pre>
-<div class="pills"><button class="pill primary" type="button" data-copy style="border:0;cursor:pointer;font:inherit;font-weight:600">Copy key</button><a class="pill ghost" href="./#get">Get Versipix</a></div>
-<p class="meta" style="margin-top:18px">In Versipix, click <strong>Enter key</strong> (or Settings, Licence) and paste it. The same key is in your email. Questions: <a href="mailto:cj83lex@gmail.com">cj83lex@gmail.com</a>.</p>
+
+<main id="main">
+
+<section class="doc">
+  <div class="wrap narrow">
+    <div class="thanks-card glass" data-thanks data-api="https://lexglobal.ro/api/versipix/licence">
+      <img src="/versipix/img/icon-256.webp" width="80" height="80" alt="">
+      <p class="eyebrow">Payment received</p>
+      <h1>Thank you. It’s yours, for good.</h1>
+
+      <div class="tk-state" data-state="pending">
+        <p class="tk-wait"><span class="spin" aria-hidden="true"></span>Getting your licence key ready…</p>
+      </div>
+      <div class="tk-state" data-state="ready" hidden>
+        <p>Your licence key:</p>
+        <div class="key-box"><code data-key></code><button class="btn btn-mint btn-sm" type="button" data-copy>Copy key</button></div>
+        <p class="meta">We’ve also emailed it to <b data-email>your email</b>. Keep that email: it’s your receipt and your key.</p>
+      </div>
+      <div class="tk-state" data-state="slow" hidden>
+        <p>Your payment went through. Your key is still being prepared and will arrive by email within a few minutes. If it doesn’t, check spam or write to <a href="mailto:cj83lex@gmail.com">cj83lex@gmail.com</a>.</p>
+      </div>
+      <div class="tk-state" data-state="missing" hidden>
+        <p>We couldn’t find a checkout on this link. If you have just paid, your key arrives by email within a few minutes. Questions: <a href="mailto:cj83lex@gmail.com">cj83lex@gmail.com</a>.</p>
+      </div>
+      <div class="tk-state" data-state="refunded" hidden>
+        <p>This order was refunded, so its licence key is no longer active. Questions: <a href="mailto:cj83lex@gmail.com">cj83lex@gmail.com</a>.</p>
+      </div>
+
+      <ol class="mini-steps">
+        <li><b>Download Versipix</b> for <a href="https://github.com/lexmediaro/versipix/releases/download/v1.0.0/Versipix-1.0.0-Windows-Setup.exe">Windows</a>, if you haven’t yet.</li>
+        <li><b>Open it and click Enter key</b> (or Settings, Licence).</li>
+        <li><b>Paste your key.</b> Done. Updates for version 1 are free.</li>
+      </ol>
+      <p class="meta">Changed your mind? You have 14 days for a full refund, no questions asked. See the <a href="/versipix/terms.html">terms</a>.</p>
+    </div>
+  </div>
 </section>
 <script>
 (() => {
-  const box = document.querySelector('[data-thanks]'), keyBox = box.querySelector('[data-key]'), status = box.querySelector('[data-status]');
+  const box = document.querySelector('[data-thanks]'); if (!box) return;
+  const api = box.dataset.api, keyEl = box.querySelector('[data-key]');
+  const show = s => box.querySelectorAll('[data-state]').forEach(el => (el.hidden = el.dataset.state !== s));
   const id = new URLSearchParams(location.search).get('session_id');
-  if (!id) { status.textContent = 'No checkout found. Your key arrives by email within a few minutes.'; return; }
+  if (!id) { show('missing'); return; }
   let tries = 0;
   const poll = async () => {
     try {
-      const r = await fetch('https://lexglobal.ro/api/versipix/licence?session_id=' + encodeURIComponent(id), { cache: 'no-store' });
+      const r = await fetch(api + '?session_id=' + encodeURIComponent(id), { cache: 'no-store' });
+      if (r.status === 400 || r.status === 404) { show('missing'); return; }
       if ([200, 202, 410].includes(r.status)) {
         const j = await r.json();
-        if (j.key) { keyBox.textContent = j.key; keyBox.hidden = false; status.textContent = 'Your licence key (also sent to ' + (j.email || 'your email') + '):'; return; }
-        if (j.status === 'refunded') { status.textContent = 'This order was refunded.'; return; }
+        if (j.key) {
+          keyEl.textContent = j.key;
+          if (j.email) box.querySelector('[data-email]').textContent = j.email;
+          show('ready'); return;
+        }
+        if (j.status === 'refunded') { show('refunded'); return; }
       }
     } catch (e) {}
-    if (++tries < 40) setTimeout(poll, 3000); else status.textContent = 'Still processing. Your key arrives by email within a few minutes; write to cj83lex@gmail.com if it does not.';
+    if (++tries < 40) setTimeout(poll, 3000); else show('slow');
   };
   poll();
   box.querySelector('[data-copy]').addEventListener('click', async e => {
-    try { await navigator.clipboard.writeText(keyBox.textContent.trim()); e.target.textContent = 'Copied'; setTimeout(() => (e.target.textContent = 'Copy key'), 1500); } catch (err) {}
+    const b = e.currentTarget;
+    try { await navigator.clipboard.writeText(keyEl.textContent.trim()); b.textContent = 'Copied'; setTimeout(() => (b.textContent = 'Copy key'), 1500); } catch (err) {}
   });
 })();
 </script>
 
 </main>
-<footer>Versipix is made by LEX GLOBAL IT S.R.L., Nr. 268B, Viișoara, Bistrița-Năsăud, 420006, Romania. Contact: <a href="mailto:cj83lex@gmail.com">cj83lex@gmail.com</a>.</footer>
-</div>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="/versipix/" aria-label="Versipix, home"><img src="/versipix/img/icon-64.png" width="30" height="30" alt=""><span>Versipix</span></a>
+        <p>PDF to JPG and PNG, and images to PDF, on your Windows PC. Offline, batch, nothing uploaded.</p>
+      </div>
+      <nav class="footer-col" aria-label="Converters">
+        <p class="footer-k">Converters</p>
+        <a href="/versipix/combine-jpg-into-one-pdf.html">Combine JPGs into one PDF</a><a href="/versipix/png-to-pdf.html">PNG to PDF</a><a href="/versipix/pdf-to-png.html">PDF to PNG</a><a href="/versipix/pdf-to-jpg.html">PDF to JPG</a><a href="/versipix/jpg-to-pdf.html">JPG to PDF</a>
+      </nav>
+      <nav class="footer-col" aria-label="Product">
+        <p class="footer-k">Product</p>
+        <a href="/versipix/#how">How it works</a>
+        <a href="/versipix/#compare">Versipix vs online tools</a>
+        <a href="/versipix/#pricing">Pricing</a>
+        <a href="/versipix/buy.html">Buy a licence</a>
+        <a href="/versipix/#faq">FAQ</a>
+      </nav>
+      <nav class="footer-col" aria-label="Company">
+        <p class="footer-k">Help</p>
+        <a href="/versipix/support.html">Support</a>
+        <a href="/versipix/privacy.html">Privacy policy</a>
+        <a href="/versipix/terms.html">Terms and refunds</a>
+        <a href="mailto:cj83lex@gmail.com">cj83lex@gmail.com</a>
+      </nav>
+    </div>
+    <div class="footer-bot">
+      <p>© 2026 LEX GLOBAL IT S.R.L., Nr. 268B, Viișoara, Bistrița-Năsăud, 420006, Romania.</p>
+      <p>Windows and Microsoft Store are trademarks of the Microsoft group of companies.</p>
+    </div>
+  </div>
+</footer>
+<script>
+// Close the mobile menu after a tap on one of its links (same-page anchors would otherwise leave it open).
+document.querySelectorAll('.nav-sheet a').forEach(a => a.addEventListener('click', () => a.closest('details').removeAttribute('open')));
+</script>
 </body>
 </html>

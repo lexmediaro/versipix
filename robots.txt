@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lexmediaro.github.io/versipix/sitemap-index.xml
